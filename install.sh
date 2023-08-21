@@ -34,10 +34,12 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install Go
-curl -O https://dl.google.com/go/go1.16.2.linux-amd64.tar.gz
-tar xvf go1.16.2.linux-amd64.tar.gz
+curl -O https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz
+tar xvf go1.21.0.linux-amd64.tar.gz
 chown -R root:root ./go
 mv go /usr/local
+
+export PATH=$PATH:/usr/local/go/bin/
 
 # Install Nodejs
 curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
