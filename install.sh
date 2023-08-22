@@ -16,7 +16,7 @@ sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y \
     unzip \
     zsh 
 
-sudo chsh -s $(which zsh)
+sudo chsh ubuntu -s $(which zsh)
 
 # Install GCloud CLI
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
