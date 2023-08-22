@@ -54,11 +54,11 @@ COPY .p10k.zsh /root/.p10k.zsh
 COPY .zshrc /root/.zshrc
 
 # Make tools directory
-RUN mkdir -p /root/tools
+RUN mkdir -p /opt/tools
 
 # Clone repositories
-RUN git clone https://github.com/fortra/impacket /root/tools/impacket && \
-    git clone https://github.com/sensepost/gowitness.git /root/tools/gowitness
+RUN git clone https://github.com/fortra/impacket /opt/tools/impacket && \
+    git clone https://github.com/sensepost/gowitness.git /opt/tools/gowitness
 
 # Back to the home directory
 WORKDIR /root
