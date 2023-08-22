@@ -53,8 +53,8 @@ mv .zshrc ~/
 mv .p10k.zsh ~/
 
 # Make tools directory
-mkdir -p /root/tools
+mkdir -p /opt/tools
 
 # Clone repositories
-git clone https://github.com/fortra/impacket /root/tools/impacket 
-git clone https://github.com/sensepost/gowitness.git /root/tools/gowitness
+git clone https://github.com/fortra/impacket /opt/tools/impacket 
+git clone https://github.com/sensepost/gowitness.git /opt/tools/gowitness
