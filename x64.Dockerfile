@@ -4,6 +4,7 @@ FROM debian:11@sha256:7a5314b612556354fd3e0bf85cffd5e3565bd390377dce8aa5e2eb86b4
 # Run updates and install necessary packages
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     python3 \
+    openvpn \
     python3-venv \
     curl \
     git \

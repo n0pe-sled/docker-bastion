@@ -3,6 +3,7 @@
 # Update and install necessary packages
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y \
     python3 \
+    openvpn \
     python3-venv \
     curl \
     git \
