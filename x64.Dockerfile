@@ -34,7 +34,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 # Install Rust
-RUN curl --proto '=hsttps' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install Go
 RUN curl -O https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz && \
