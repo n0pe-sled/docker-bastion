@@ -3,10 +3,12 @@ FROM debian:11@sha256:7a5314b612556354fd3e0bf85cffd5e3565bd390377dce8aa5e2eb86b4
 
 # Run updates and install necessary packages
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+    openvpn \ 
     python3 \
-    openvpn \
     python3-venv \
     curl \
+    gpg \
+    unzip \
     git \
     jq \
     dnsutils \
@@ -21,13 +23,16 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     chsh -s $(which zsh)
 
 # Install GCloud CLI
-RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
-    apt-get update -y && apt-get install google-cloud-sdk -y
+RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
+    apt-get update && \
+    apt-get install google-cloud-cli -y
+
 
 # Install AWS CLI
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
+    rm -rf awscliv2.zip && \
     ./aws/install
 
 # Install Azure CLI
