@@ -28,7 +28,8 @@ export PATH=$PATH:$HOME/go/bin
 alias pip=pip3
 alias python=python3
 alias help='echo "Tooling Installed:\nPowershell\nGCloud\nMetasploit\ndirsearch\ndnsrecon\nimpacket\nbloodhound.py\nsqlmap\ncertipy-ad\nCoercer\npyldapsearch\npysqlrecon\nspraycharles\nPMapper\nScoutSuite\ntrevorspray\ntrevorproxy\ncerti\nenum4linux-ng\nrecon-ng\nPetitPotam\npre2k\npywhisker\nPKINITtools\nsccmhunter\nwmiexec-Pro\nbf-aws-perms-simulate\nbf-aws-permissions\nysoserial\ngodap\nldapper\nkerbrute\nTeamsUserEnum\ncloudfox\nnikto\nmikto\nPowerSploit\nMicroBurst\nBARK"'
-
+alias jq-aws="jq -r '@sh \"export AWS_ACCESS_KEY_ID=\(.Credentials.AccessKeyId) AWS_SECRET_ACCESS_KEY=\(.Credentials.SecretAccessKey) AWS_SESSION_TOKEN=\(.Credentials.SessionToken)\"'"
+alias unset-aws="unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
