@@ -9,7 +9,7 @@ if [ "$command_output" = "sh" ]; then
     # Currently in Script session
 else
     # Not in Script session
-    script -f -c "/usr/bin/zsh" $HOME/.logs/$CURDATE.log
+    script -f -m "advanced" -c "/usr/bin/zsh" $HOME/.logs/$CURDATE.log
     exit
 fi
 
