@@ -35,3 +35,4 @@ jobs:
           file: arm8.Dockerfile
           tags: n0pesled/bastion:armv8
           platforms: linux/arm64
+          push: true
