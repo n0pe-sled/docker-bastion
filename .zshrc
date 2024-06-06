@@ -46,8 +46,9 @@ function load-aws-creds() {
     aws sts get-caller-identity
 }
 
-# adding zoxide to path
+# adding zoxide to path and aliases for zoxide
 export PATH=$PATH:$HOME/.local/bin
+alias cd="z"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
