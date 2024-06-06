@@ -137,7 +137,8 @@ RUN git clone https://github.com/sullo/nikto /opt/tools/nikto && echo "#\!/bin/b
     
 # Installing Bash Tools
 RUN git clone https://github.com/carlospolop/bf-aws-permissions.git /opt/tools/bf-aws-permissions && ln -s /opt/tools/bf-aws-permissions/bf-aws-permissions.sh /usr/bin/bf-aws-permissions && \
-    git clone https://github.com/ChrisTruncer/mikto.git /opt/tools/mikto && echo "#\!/bin/bash\nbash /opt/tools/mikto/Mikto.sh \"\$@\"" > /usr/bin/mikto && chmod +x /usr/bin/mikto
+    git clone https://github.com/ChrisTruncer/mikto.git /opt/tools/mikto && echo "#\!/bin/bash\nbash /opt/tools/mikto/Mikto.sh \"\$@\"" > /usr/bin/mikto && chmod +x /usr/bin/mikto && \
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 # Installing Powershell Tools
 RUN git clone https://github.com/PowerShellMafia/PowerSploit.git /opt/tools/PowerSploit && \
