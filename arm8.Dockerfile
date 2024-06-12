@@ -8,6 +8,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     openvpn \ 
     wget \
     python3 \
+    uuid \
     python3-pip \
     python3-venv \
     pipx \

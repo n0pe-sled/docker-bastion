@@ -48,6 +48,7 @@ function load-aws-creds() {
 
 # adding zoxide to path and aliases for zoxide
 export PATH=$PATH:$HOME/.local/bin
+eval "$(zoxide init zsh)"
 alias cd="z"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
