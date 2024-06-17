@@ -24,6 +24,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     net-tools \
     ldap-utils \
     libssl-dev \
+    groff \
     screen \
     nmap \
     make \
